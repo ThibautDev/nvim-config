@@ -16,5 +16,10 @@ return {
                 dotfiles = true,
             },
         })
+
+        -- set keymaps
+        local keymap = vim.keymap -- for conciseness
+
+        keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
     end
 }
