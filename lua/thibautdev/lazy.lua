@@ -11,4 +11,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ import = "thibautdev.plug" })
+require("lazy").setup({
+    import = "thibautdev.plug", 
+    change_detection = {
+        enabled = true, 
+        notify = false, 
+    },
+})
