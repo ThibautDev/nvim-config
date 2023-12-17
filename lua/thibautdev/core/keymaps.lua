@@ -3,6 +3,9 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
+-- save file
+keymap.set("n", "<leader>w", ":w<CR>") -- split window horizontally
+
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
@@ -17,4 +20,6 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
 
-
+-- code-runner
+vim.keymap.set('n', '<leader>rr', ':RunCode<CR>', { noremap = true, silent = false })
+vim.keymap.set('n', '<leader>rc', ':RunClose<CR>', { noremap = true, silent = false })
